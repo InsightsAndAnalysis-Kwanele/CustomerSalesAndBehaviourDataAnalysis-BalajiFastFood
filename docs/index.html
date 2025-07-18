@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balaji Fast Food Sales Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header style="background-image: url('Resturant.jpg'); background-size: cover; background-position: center;">
+    <div class="top-right-links">
+		<span style="color:#fff; font-weight:600;">Email: buthelezikwanele50@gmail.com</span>
+	</div>
+
+    <div class="header-overlay"></div>
+    <div class="header-content">
+        <h1>Balaji Fast Food Sales & Customer Behaviour Analysis</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#methodology">Methodology</a></li>
+            <li><a href="#questions">Business Questions</a></li>
+            <li><a href="#Analysis">Analysis & Insights</a></li>
+            <li><a href="#conclusion">Business Solutions</a></li>
+			<li><a href="https://github.com/InsightsAndAnalysis-Kwanele/CustomerSalesAndBehaviourDataAnalysis-Balaji-Fast-Food-.git" target="_blank">GitHub</a><li>
+        </ul>
+    </nav>
+</header>
+
+    
+ <main>
+  <section id="intro">
+        <h2>Introduction</h2>
+        <p>Balaji Fast Food is a restaurant offering a wide range of items from nice sweet drinks to delicious Indian food.</p>
+		<p>Using the company’s sales data, I took the initiative to investigate what drives
+		the business’s ability to thrive and generate the revenue it does, looking at customers, 
+		which demographic/gender are regular in the business and data such as the items that customers mostly buy, the purchasing power  and what initiatives the 
+		restaurant can put in place to get other demographics into purchasing in order to maximize sales.</p>
+		<p>I also dive deeper and look at factors such as time of day and date, when do people usually buy- hour of the day, the day of the month- and to what extent does this affect the buying power of customers and how can the business take advantage of this.</p>
+    </section>
+	
+	
+	<div class="image-right">
+      <img src="sandwich.jpeg" alt="food">
+    </div>
+
+	
+	
+	
+	
+  <section id="methodology">
+        <h2>STEPS TAKEN IN THE DATA ANALYSIS PROCESS (METHODOLOGY)</h2>
+        <ol>
+            <li> Business Questions: deriving business questions and looking at how these questions can be answered through the data.</li>
+            <li> Data Extraction and Data Cleaning.</li>
+            <li> Using SQL server and T-SQL for Exploratory Data Analysis and calculating KPIs</li>
+            <li> Visualizing the data in Power BI,Transforming the data in Power query while connecting to SQL Server</li>
+            <li> Creating a restaurant sales dashboard in Power BI and Compiling
+business insights</li>
+        </ol>
+    </section>
+
+ <section id="questions">
+        <h2>Business Questions</h2>
+		<p>Upon data extraction,data cleaning and analysis I had to answer a set of business questions which were:</p>
+        <ul>
+            <li>Does the type of food (item name) affect the customer’s buying decision?</li>
+            <li>Does the price affect the quantity of the items a customer buys or is it irrelevant based on customer preferences?</li>
+            <li>To what extent that does the price play in sales and revenue? Do the cheap food items/meals and beverages get purchased more often than expensive ones? </li>
+            <li>Do customers using cards/online payments spend more than customers using cash? How can this information help the business? Can Self-buying services like kiosks help maximize sales?</li>
+            <li>Does demographic (gender) play a role in sales and purchasing decisions? Which gender spends more in the restaurant? What initiatives can be put in place to make sure the other gender which spends less also spends more in order to maximize sales?</li>
+            <li>Does time and day effect sales and customer buying decisions? Are the times of the day where sales are the highest? How can this be utilized by the restaurant to maximize sales? Same for the day of the month</li>
+		</ul>
+    </section>
+	
+<section id="sales" class="side-image" id="Analysis">
+    <div class="text" style="color:black;">
+        <h2>Overall Sales</h2>
+				<p>Before analyzing customer behaviour I did an overall analysis on the business's sales and customers orders</p> 
+				<p>What I deduced:</p>
+				<ul>
+					<li>Sales were the highest during 3 months, May, October and January. 
+					With May generating ₹26570, October making ₹27205 and January with ₹28670. 
+					With general higher highs and high lows, which generally showed an up trend and showed how the business was growing as the year progressed.(Currency is in Indian rupees as Balaji is situated in India)</li>
+					<li>The interesting month was May, having the highest number of orders and the highest percentage increase in sales of 33.6% from the second lowest month April which was also at the beginning of the financial month ,
+					assuming that this is when the business was starting(due to limited information on which the sales data is from) , 
+					this would be evident that good marketing strategies especially a good word of mouth and positive reviews help in sales revenues and profit.
+					</li>
+				 </ul>
+    </div>
+    <div class="image">
+        <img src="monthly_sales.png" alt="Sales Trend">
+		<img src="monthly_orders.png" alt="Sales Trend">
+    </div>
+</section>
+
+
+    <section>
+        <ul>
+           
+		   <li>May also had the highest number of meals sold for the entire month with 589 meals and also relatively high number of beverages
+			making up 237 beverages sold for the month. This was a huge bump with the highest increase than the other months in items sold</li>
+		 </ul>
+        <div class="center-img">
+            <img src="meals_beverages.png" alt="May Sales Breakdown">
+        </div>
+    </section>
+
+    <section class="side-image">
+        <div class="text" style="color:black;">
+            <ul>
+			   <li>Analysing sales and the days of the week ,
+			   Sundays surprisingly made the most amount of sales  generating ₹ 43970 with 158 orders made in total.
+			   This was interesting as generally most people would prefer home cooked food and being around families on this day</li>
+			   <li>As an incentive and a business solution possibly to maximize sales the restaurant should create a more family friendly environment from the menu items being sold to the restaurant setup,
+			   introduce family meals combinations and offer promotions and discounts like 4 of these meals for certain prices to encourage customers to bring also their families </li>
+			</ul>
+		</div>
+     <div class="image">
+	 
+         <img src="weakly_revenue.png"  height="200" width="120" alt="Weekly Trend Sales">
+		 <img src="weekly_orders.png" height="200" width="120" alt="weekly orders ">
+	 
+    </div>
+    </section>
+
+    <div class="center-heading">ANSWERING BUSINESS QUESTIONS</div>
+
+    <section>
+        <p><strong>1.Does the type of food (item name) affect the customer’s buying decision?</strong></p>
+        <ul>
+		   <li>Yes, as it did seem that customers seemed more inclined to order some menu items than other ones. With Sandwiches generating the most amount of revenue with ₹ 65820 with over 1097 orders made. And Vadapav lowest in sales making ₹20120 with 1006 orders made.</li>
+		</ul>
+		
+		<div class="img-row">
+            <img src="item_sales.png" height="250" width="200" alt="High Price Sales">
+            <img src="order_items.png" height="250" width="200" alt="Low Price Sales">
+        </div>
+		
+		<ul>
+		   <li>Although some items generated low revenue to an extent but it was not detrimental to the business as they still do generate revenue they should be kept as a menu item.</li>
+		   <li>The restaurant should introduce more items, make a test run or offer free samples to see how people would like them and slowly add these items to the menu. From items that do not require much resources to the ones that do, maintaining a balance between expenses and income while also increasing sales. </li>
+		</ul>
+    
+    </section>
+
+    <section class="side-image">
+        <div class="text" style="color:black;">
+            <p><strong>2.Does the price affect the quantity of the items a customer buys or is it irrelevant based on customer preferences?</strong></p>
+            <ul>
+		   <li>Customer buying decision seems to be mostly based on preference and what is generally liked,	    
+			   as a relatively low-priced menu item which was sugarcane juice priced at ₹25 was the second most bought item, with cold coffee being the most bought item priced at ₹40 which is not the most expensive item on the menu. 
+			   Customer preference and what is liked seems to play a big role in the buying decision of customers.</li>
+		</ul>
+        </div>
+        <div class="image">
+            <img src="item_prices.png" alt="Price vs Sales">
+        </div>
+    </section>
+
+    <section>
+        <p><strong>3. To what extent that does the price play in sales and revenue? Do the cheap food
+		items/meals and beverages get purchased more often than expensive ones?</strong></p>
+        <ul>
+		   <li>Price definitely played a role in how and what people bought, however contrary to what I
+				thought, more expensive menu items generated more sales than cheaper food items. It
+				showed something about customer behaviour and how customers seemed to value
+				quality over affordability. There was a strong positive correlation between price of items
+				and sales.
+		    </li>
+		</ul>
+        <div class="img-row">
+            <img src="price_sales.png" height="250" width="200" alt="High Price Sales" >
+            <img src="sale_price_relationship.png" height="250" width="200" alt="Low Price Sales">
+        </div>
+    </section>
+
+    <section>
+        <p><strong>4. Do customers using cards/online payments spend more than
+           customers using cash? How can this information help the business?
+           Can Self-buying services like kiosks help maximize sales?</strong></p>
+        <ul>
+            <li>There was not a great disparity between transaction types and their
+				effect on sales with cash payments making 59.82% of sales and card
+				payments making 40.1% of sales generated, what I could infer was
+				that most users preferred a cash-based system rather that an
+				electronic or card based. </li>
+        </ul>
+        <div class="center-img">
+            <img src="transaction_type.png" height="250" width="200" alt="Payment Methods">
+        </div>
+    </section>
+	
+	
+	
+	
+	<section class="side-image">
+        <div class="text"  style="color:black;">
+            <p><strong>5.Does demographic (gender) play a role in sales
+			and purchasing decisions? Which gender spends
+			more in the restaurant? What initiatives can be put
+			in place to make sure the other gender which
+			spends less also spends more in order to maximize
+			sales?</strong></p>
+            
+		<ul>
+		   <li>Both men and women seemed to have the
+				same buying power, both genders were
+				spending and were adding almost equally to
+				the sales generated through out the year.
+				However, using the filter feature it was apparent
+				that by gender, males were more inclined to
+				certain menu items and females were inclined
+				to certain menu items, this was evident on the
+				sales generated on certain items based on
+				gender.</li>
+		</ul>
+        </div>
+        <div class="image">
+            <img src="sales_gender.png" height="250" width="200" alt="Price vs Sales">
+        </div>
+    </section>
+	
+	
+	 <section>
+ 
+        <ul>
+		   <li>Sales generation and menu items based on males  </li>
+			   <div class="img-row">
+					<img src="male_chart.png" height="250" width="200" alt="High Price Sales">
+					<img src="male_sale.png" height="250" width="200" alt="Low Price Sales">
+			   </div>
+		   <li>Sales generation and menu items based on females  </li>
+				<div class="img-row">
+					<img src="female_chart.png" height="250" width="200" alt="High Price Sales">
+					<img src="female_sales.png" height="250" width="200" alt="Low Price Sales">
+				</div>
+		</ul> 
+ 
+    </section>
+	
+	
+	<section class="side-image">
+        <div class="text" style="color:black;">
+            <p><strong>6.Does time and day effect sales and
+			customer buying decisions? Are the times of
+			the day where sales are the highest? How can
+			this be utilized by the restaurant to maximize
+			sales? Same for the day of the month?</strong></p>
+            
+		<ul>
+		   <li>Looking at the time of the day where most
+				sales and orders were made the results
+				were obvious as the time between
+				afternoon ,night and evening would make
+				the most amount of sales making up about
+				61% of the sales made, as this the time
+				were most consumers are not working.</li>
+		</ul>
+        </div>
+        <div class="image">
+            <img src="daily_sales_piechart.png" height="250" width="200" alt="Price vs Sales">
+        </div>
+    </section>
+	
+	
+	
+
+    <div class="center-heading">BUSINESS SOLUTIONS AND INCENTIVES</div>
+	
+	
+	
+	 <section id="conclusion">
+        <h2>Business Solutions and Insights</h2>
+		<p>In conclusion customer buying decision seemed to be based primarily on quality and preference with
+			the cheapest menu items making the least number of sales and orders. As a business solution and an
+			incentive geared towards this insight, the business/restaurant Balaji as a way to maximize sales :</p>
+        <ul>
+            <li> They should aggressively promote the bestselling menu items like the Sandwich, the Frankie and the
+				Cold coffee beverage e.g. Highlighting the items on the menu as “Trending”,” Most Popular”,” People’s
+				favourites” as way to draw more people in.</li>
+            <li> Use Upselling methods as a way again to draw more people towards these items e.g. offer additional
+				items at lower prices for buying the popular items, like a person can get sugarcane juice priced at ₹20
+				for ₹15 if they buy with a Sandwich or another item.</li>
+            <li>Add varieties of the popular items to the menu e.g. to the popular items like the Sandwich, introduce
+				and offer different variations to the traditional popular Sandwich adding different ingredients and selling
+				it. </li>
+		</ul>
+		<p> Further insight also suggested that most users were using cash with almost 60 % using cash and 40% using
+			card payments, to improve customer experience and boost positive reviews, in place there should be
+			procedures to increase service time, for cash users having change and training stuff members in
+			handling cash quicker to avoid delays in order time, for card users making sure all card machines are
+			reliable and process fast, buy more card machines. As we are a digitally evolving society it might be
+			better to encourage card payments, offer discounts for card payments e.g. “Spend more than R 250 on
+			card payment and get 15% off”</p>
+			
+		<p>Implementing these business strategies, will improve customer satisfaction, reviews and rating while also
+			increasing and growing sales.</p>
+    </section>
+ </main>
+    <footer>
+        <p>Project by [Kwanele] | <a href="https://github.com/InsightsAndAnalysis-Kwanele/CustomerSalesAndBehaviourDataAnalysis-Balaji-Fast-Food-.git" target="_blank" style="color:black;">View on GitHub</a></p>
+         <p>Dataset [Kaggle] | <a href="https://www.kaggle.com/datasets/ahmedhalimo/balaji-fast-food-sales?" target="_blank" style="color:black;">View on Kaggle</p>
+		 <a href="mailto:buthelezikwanele50@gmail.com" style="color: #fff; font-weight: 600; text-decoration: none;">Email: buthelezikwanele50@gmail.com</a>
+
+	</footer>
+</body>
+</html>
